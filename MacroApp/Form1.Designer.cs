@@ -34,6 +34,7 @@ namespace MacroApp
             this.stop = new System.Windows.Forms.Button();
             this.start = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label_x = new System.Windows.Forms.Label();
@@ -50,29 +51,32 @@ namespace MacroApp
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.winform_close = new System.Windows.Forms.Button();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // stop
             // 
             this.stop.BackColor = System.Drawing.Color.LightCoral;
             this.stop.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.stop.Font = new System.Drawing.Font("티머니 둥근바람 Regular", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.stop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.stop.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.stop.Location = new System.Drawing.Point(0, 581);
+            this.stop.Location = new System.Drawing.Point(0, 616);
             this.stop.Name = "stop";
             this.stop.Size = new System.Drawing.Size(361, 40);
             this.stop.TabIndex = 0;
             this.stop.Text = "중지하려면 아무 키나 누르세요";
             this.stop.UseVisualStyleBackColor = false;
             this.stop.Click += new System.EventHandler(this.stop_Click_1);
+            this.stop.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.stop_PreviewKeyDown);
             // 
             // start
             // 
             this.start.BackColor = System.Drawing.Color.CornflowerBlue;
             this.start.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.start.Font = new System.Drawing.Font("티머니 둥근바람 Regular", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.start.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.start.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.start.Location = new System.Drawing.Point(0, 541);
+            this.start.Location = new System.Drawing.Point(0, 576);
             this.start.Name = "start";
             this.start.Size = new System.Drawing.Size(361, 40);
             this.start.TabIndex = 1;
@@ -83,11 +87,22 @@ namespace MacroApp
             // panel4
             // 
             this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
+            this.panel4.Controls.Add(this.button1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(361, 165);
             this.panel4.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(280, 112);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel5
             // 
@@ -100,44 +115,44 @@ namespace MacroApp
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("티머니 둥근바람 ExtraBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label5.Location = new System.Drawing.Point(55, 208);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(141, 19);
+            this.label5.Size = new System.Drawing.Size(116, 15);
             this.label5.TabIndex = 4;
             this.label5.Text = "X좌표를 입력하시오";
             // 
             // label_x
             // 
             this.label_x.AutoSize = true;
-            this.label_x.Font = new System.Drawing.Font("티머니 둥근바람 ExtraBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_x.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label_x.ForeColor = System.Drawing.Color.LightSlateGray;
             this.label_x.Location = new System.Drawing.Point(55, 238);
             this.label_x.Name = "label_x";
-            this.label_x.Size = new System.Drawing.Size(20, 19);
+            this.label_x.Size = new System.Drawing.Size(16, 15);
             this.label_x.TabIndex = 5;
             this.label_x.Text = "X";
             // 
             // label_y
             // 
             this.label_y.AutoSize = true;
-            this.label_y.Font = new System.Drawing.Font("티머니 둥근바람 ExtraBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_y.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label_y.ForeColor = System.Drawing.Color.LightSlateGray;
             this.label_y.Location = new System.Drawing.Point(55, 313);
             this.label_y.Name = "label_y";
-            this.label_y.Size = new System.Drawing.Size(20, 19);
+            this.label_y.Size = new System.Drawing.Size(15, 15);
             this.label_y.TabIndex = 8;
             this.label_y.Text = "Y";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("티머니 둥근바람 ExtraBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label8.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label8.Location = new System.Drawing.Point(55, 283);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(141, 19);
+            this.label8.Size = new System.Drawing.Size(115, 15);
             this.label8.TabIndex = 7;
             this.label8.Text = "Y좌표를 입력하시오";
             // 
@@ -157,14 +172,15 @@ namespace MacroApp
             // 
             this.want_x.Location = new System.Drawing.Point(159, 232);
             this.want_x.Name = "want_x";
-            this.want_x.Size = new System.Drawing.Size(149, 25);
+            this.want_x.Size = new System.Drawing.Size(149, 21);
             this.want_x.TabIndex = 9;
+            this.want_x.TextChanged += new System.EventHandler(this.want_x_TextChanged);
             // 
             // want_y
             // 
             this.want_y.Location = new System.Drawing.Point(159, 307);
             this.want_y.Name = "want_y";
-            this.want_y.Size = new System.Drawing.Size(149, 25);
+            this.want_y.Size = new System.Drawing.Size(149, 21);
             this.want_y.TabIndex = 10;
             // 
             // see_no
@@ -172,9 +188,9 @@ namespace MacroApp
             this.see_no.BackColor = System.Drawing.Color.Plum;
             this.see_no.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.see_no.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.see_no.Font = new System.Drawing.Font("티머니 둥근바람 Regular", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.see_no.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.see_no.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.see_no.Location = new System.Drawing.Point(0, 501);
+            this.see_no.Location = new System.Drawing.Point(0, 536);
             this.see_no.Name = "see_no";
             this.see_no.Size = new System.Drawing.Size(361, 40);
             this.see_no.TabIndex = 11;
@@ -190,9 +206,9 @@ namespace MacroApp
             // 
             this.see_yes.BackColor = System.Drawing.Color.MediumPurple;
             this.see_yes.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.see_yes.Font = new System.Drawing.Font("티머니 둥근바람 Regular", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.see_yes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.see_yes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.see_yes.Location = new System.Drawing.Point(0, 461);
+            this.see_yes.Location = new System.Drawing.Point(0, 496);
             this.see_yes.Name = "see_yes";
             this.see_yes.Size = new System.Drawing.Size(361, 40);
             this.see_yes.TabIndex = 12;
@@ -204,18 +220,18 @@ namespace MacroApp
             // 
             this.want_time.Location = new System.Drawing.Point(159, 375);
             this.want_time.Name = "want_time";
-            this.want_time.Size = new System.Drawing.Size(149, 25);
+            this.want_time.Size = new System.Drawing.Size(149, 21);
             this.want_time.TabIndex = 16;
             this.want_time.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("티머니 둥근바람 ExtraBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label6.ForeColor = System.Drawing.Color.LightSlateGray;
             this.label6.Location = new System.Drawing.Point(55, 381);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(20, 19);
+            this.label6.Size = new System.Drawing.Size(15, 15);
             this.label6.TabIndex = 15;
             this.label6.Text = "T";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -223,11 +239,11 @@ namespace MacroApp
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("티머니 둥근바람 ExtraBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label7.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label7.Location = new System.Drawing.Point(55, 351);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(164, 19);
+            this.label7.Size = new System.Drawing.Size(135, 15);
             this.label7.TabIndex = 14;
             this.label7.Text = "반복 시간을 입력하세요";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -241,9 +257,24 @@ namespace MacroApp
             this.panel7.TabIndex = 13;
             this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
+            // winform_close
+            // 
+            this.winform_close.BackColor = System.Drawing.Color.MediumPurple;
+            this.winform_close.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.winform_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.winform_close.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.winform_close.Location = new System.Drawing.Point(0, 456);
+            this.winform_close.Name = "winform_close";
+            this.winform_close.Size = new System.Drawing.Size(361, 40);
+            this.winform_close.TabIndex = 17;
+            this.winform_close.Text = "윈폼 종료";
+            this.winform_close.UseVisualStyleBackColor = false;
+            this.winform_close.Click += new System.EventHandler(this.winform_close_Click);
+            // 
             // Form1
             // 
-            this.ClientSize = new System.Drawing.Size(361, 621);
+            this.ClientSize = new System.Drawing.Size(361, 656);
+            this.Controls.Add(this.winform_close);
             this.Controls.Add(this.want_time);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
@@ -264,6 +295,7 @@ namespace MacroApp
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load_1);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.key_down);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,6 +330,8 @@ namespace MacroApp
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button winform_close;
     }
 }
 
